@@ -1,0 +1,17 @@
+<!-- Creating EJS Templates
+  We're making a template so taht we don't have to create a new HTML page every time we want to direct our pages that are similar to each other. We can also use the rendering to input node/express outputs into our html files.
+  Anything you cand do in html, you can do in ejs.
+  
+
+
+   1. npm install ejs
+   2. Input 
+          app.set('view engine', 'ejs')
+            This tells our app to use ejs as its view engine. Make sure to include it below the 
+            const app=express()
+   3. Create a folder called 'views' on the directory with your code. This is the location where ejs will look for by default to render your files.
+   4. Input
+          app.get('/', (req, res) => {
+            res.render('index', {foo: 'FOO'});
+          });
+            This tells the app to render the index file while using the ejs engine.  -->

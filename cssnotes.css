@@ -1,0 +1,66 @@
+/* 25Nov2019 */
+
+/* Background-gradient */
+img {
+  background-image: url("toFile"), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+  /* Make sure the height is not set to a percentage, rather 100vh */
+}
+
+
+/* Flexbox centering items */
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+/* 27Nov2019 */
+
+/* Diagonal background-color */
+.background {
+  background-color: rgb(180, 123, 255);
+  background-image: -webkit-linear-gradient(70deg, rgb(180, 123, 255) 40%, rgb(231, 213, 255) 40%);
+  /* '70deg' alters the slope. The percentages must be the same if you want a clear cut line between them. Play around with the percentages to transform the slope */
+  height: 100vh;
+}
+
+
+/* Unordered list without bullets */
+
+ul {
+  list-style-type: none;
+}
+
+/* Making perfect circle buttons */
+.button {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  border: none;
+  font-size: 1.4rem;
+  background-color: rgb(138, 113, 207);
+  color: #FFF;
+  cursor: pointer;
+}
+
+  /* Make sure not to have any padding, or else it will not center the text inside the button */
+
+/* Strikeout text when checked checkbox */
+input[type=checkbox]:checked + label.strike {
+  text-decoration: line-through;
+  /* Below is the color of the strike line */
+  
+}
+    /* You have to put your text inside <label class='strike'></label> for this to work in this case*/
+
+
+/* How to remove outline when focused into the text */
+.newTask:focus {
+  outline: none;
+  /* Adding the folling below will add outline just on the bottom */
+  border-bottom: 1px solid rgb(138, 113, 207);
+}
+
+
