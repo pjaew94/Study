@@ -545,10 +545,41 @@ app.get('/compose', function(req,res) {
       // Advantages: Able to add new categories without having 'null' come out as default for empty. A lot more flexible than SQL. Very good for start ups. It has great scalability. This is because you are able to take chunks of data and spread it. More like spreading your data horizontally and not vertically when building a building.
       // Disadvantages: Known as "non-relational" database because it's not as efficent as SQL when it comes to syncing datas together. You can have different objects containing different information about one customer, but it will be less convinent to join the data together if needed be than SQL.
 
+      //MONGODB
+        // 1. Make sure to make shortcuts to mongod and mongo once you've installed it.
+        // 2. input 'mongod' on your bash
+        // 3. open new bash and input 'mongo' to run mongo.
 
+        // CRUD FOR MONGODB:
+        https://docs.mongodb.com/manual/crud/
 
+        // RELATIONSHIPS FOR MONGODB:
+            db.products.insert(
+              {
+                _id: 2,
+                name: "Pencil",
+                price: 0.80,
+                stock: 12,
+                reviews: [
+                  {
+                    authorName: "Jae",
+                    rating: 5,
+                    review: "Best pencil ever!"
+                  },
+                  {
+                    authorName: "Jason",
+                    rating: 5,
+                    review: "Awesome pencil!"
+                  }
+                ]
+              }
+            )
+                //Here, we are able to draw relationships between one table to another by including them inside a table
 
-    
+      // How to connect mongoDB to node.js
+        // There are two ways to do this. You can use the mongoDB native driver or use Mongoose. Mongoose is a lot easier to use, therefore more preferred.
 
+        // MongoDB Native Driver:
+              // How to get started: https://mongodb.github.io/node-mongodb-native/3.1/quick-start/quick-start/
 
-
+              
